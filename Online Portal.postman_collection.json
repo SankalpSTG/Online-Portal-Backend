@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "f676f46a-54ea-4826-9e6c-914fcfd68f7b",
+		"name": "Online Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_id\": \"sankalp.ashok@relevel.com\",\n    \"password\": \"Sankalp@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/signup/user",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"signup",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_id\": \"sankalp.ashok@relevel.com\",\n    \"password\": \"Sankalp@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/login/user",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"login",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contest",
+			"item": [
+				{
+					"name": "Get Upcoming Contests",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXJpYWxfaWQiOjIxLCJlbWFpbF9pZCI6InNhbmthbHAuYXNob2tAcmVsZXZlbC5jb20iLCJjb21wYW55X2lkIjpudWxsLCJpYXQiOjE2NTI4NjczMDAsImV4cCI6MTY1Mjg4ODkwMH0.TcA0WTuujQh7GJrQXPX-JphjIDJ7jDHzP-SuZriSFmw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/contests/upcoming",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"contests",
+								"upcoming"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Contest",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXJpYWxfaWQiOjIwLCJlbWFpbF9pZCI6InNhbmthbHBwb2xrMTIzQGdtYWlsLmNvbSIsImNvbXBhbnlfaWQiOjMsImlhdCI6MTY1Mjg2ODIzMiwiZXhwIjoxNjUyODg5ODMyfQ.4f_mLerjqUn8ECX5nbQXVKRSpKVDw6d6_-kLBPk5IWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Contest 7\",\n    \"start_time\": 259200,\n    \"end_time\": 2592000,\n    \"required_time\": 345600\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/contest/add",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"contest",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ongoing Contests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/contests/ongoing",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"contests",
+								"ongoing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contest Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/contest/5",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"contest",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register To Contest",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXJpYWxfaWQiOjIxLCJlbWFpbF9pZCI6InNhbmthbHAuYXNob2tAcmVsZXZlbC5jb20iLCJjb21wYW55X2lkIjpudWxsLCJpYXQiOjE2NTI4Njk1OTYsImV4cCI6MTY1Mjg5MTE5Nn0.rwjdy1tNaCH2hMn-WJnNJe7vZx9xDBX5jy6Tdjrq_QQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/contest/5/register/21",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"contest",
+								"5",
+								"register",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
